@@ -49,10 +49,12 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
         # across all operating systems
-        python-version: [2.7, 3.9.1]
+        # TODO replace 2.7 with 3.6 once we're Python 3 only
+        python-version: [2.7, 3.9]
         include:
           # on Ubuntu run these as well
           - os: ubuntu-latest
+            # TODO remove 3.6 here once we're Python 3 only
             python-version: 3.6
           - os: ubuntu-latest
             python-version: 3.7
